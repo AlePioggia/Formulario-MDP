@@ -93,4 +93,122 @@ $
 \end{cases}
 $ \\ \\	
 
+\newpage
+
 \section{Variabili discrete multidimensionali}
+\subsection{Funzione di ripartizione}
+Sia $F_{x} : \mathbb{R} \rightarrow \mathbb{R}$, allora la sua funzione di ripartizione è la seguente :
+\begin{itemize}
+	\item $F_{x} = P(x \leq t)$
+\end{itemize}
+
+\subsection{Funzione di ripartizione del max}
+Siano S, T due variabili aleatorie indipendenti e $Z = max(S, T)$, Allora: 
+\begin{itemize}
+	\item $F_{Z}(t) = F_{S}(t) \cdot F_{T}(t)$
+\end{itemize}
+
+\subsection{Funzione di ripartizione del min}
+Siano S, T due variabili aleatorie indipendenti e W = min(S, T), Allora:
+\begin{itemize}
+	\item ($1 - F_{x}(k)) = (1 - F_{S}(t)) \cdot (1 - F_{T}(t))$
+\end{itemize}
+
+\newpage
+
+\section{Valore atteso e varianza}
+\subsection{Valore atteso}
+\textbf{Definizione}
+\begin{itemize}
+	\item $E[x] = \displaystyle \sum_{h \in \mathbb{R}} d_{x}(h) \cdot h $; 
+\end{itemize} 
+
+\begin{flushleft}
+	\textbf{Proprietà valore atteso}
+\end{flushleft}
+\begin{itemize}
+	\item $E[x + y] = E[x] + E[y]$
+	\item $E[x \cdot y] = E[x] \cdot E[y]$ (valido $\leftrightarrow$ x e y indipendenti)
+\end{itemize}
+\subsection{Varianza e covarianza}
+\textbf{Definizione varianza} 
+\begin{itemize}
+	\item $Var(x) = E[(x - E[x])^2]$
+\end{itemize}
+\textbf{Definizione covarianza} 
+\begin{itemize}
+	\item $Cov(x, y) = E[x] \cdot E[y]$ 
+\end{itemize}
+
+\begin{flushleft}
+	\textbf{Proprietà varianza}
+\end{flushleft} 
+\begin{itemize}
+	\item $Var(x) = E[x^2] - E[x]^2$
+	\item $Var(x + y) = var(x) + var(y)$
+\end{itemize}
+\textbf{Proprietà covarianza}
+\begin{itemize}
+	\item siano x, y indipendenti $\rightarrow Cov(x, y) = 0$
+\end{itemize}
+
+\newpage
+\section{Variabili aleatorie continue}
+\subsection{Densità continua}
+x v.a continua, la sua densità è una funzione: \\ \\
+$f_{x} : \mathbb{R} \rightarrow \mathbb{R}$ t.c : \\
+\[ \int_{a}^{b} f_{x}(s) \,ds  = P(a \leq x \leq b)\]
+\subsection{Densità e funzione di ripartizione astratta}
+\textbf{Densità continua astratta}
+\begin{itemize} 
+	\item $f(s) \geq 0$
+	\item  $ \int_{-\infty}^{\infty} f(s)ds  = 1 $
+\end{itemize}
+\textbf{Funzione di ripartizione astratta} \\ \\
+$F : \mathbb{R} \rightarrow \mathbb{R}$ t.c : 
+\begin{itemize}
+	\item $\lim_{-\infty} F(t) = 0$ e $\lim_{+\infty}  F(t) = 1$
+	\item F debolmente crescente
+\end{itemize}
+\subsection{Valore atteso}
+\[ E[x] = \int_{-\infty}^{\infty} f_{x}(s) \,s \ ds\]
+\textbf{Proprietà} \\
+\begin{itemize}
+	\item $E[ax + bx] = aE[x] + bE[y]$
+	\item $E[x \cdot y] = E[x] \cdot E[y]$
+	\item $E[\phi(x)] = \int_{-\infty}^{\infty} \phi(s)f_{x}(s)$ (se $\phi$:$\mathbb{R}$ $\rightarrow$ $\mathbb{R}$)
+\end{itemize}
+\newpage
+\subsection{Varianza}
+$Var(x) = E[x^2] - E[x]^2$ \\ \\
+\textbf{Proprietà}
+\begin{itemize}
+	\item $Var(aX) = a^2 \cdot Var(X)$
+	\item $Var(x + y) = Var(x) + Var(y)$
+\end{itemize}
+\subsection{Variabili uniformi continue}
+$X \texttildelow U([a, b])$ 
+\begin{itemize}
+	\item $F_{x}(s) = \dfrac{s - a}{b - a}$ 
+	\item $f_{x}(s) = \dfrac{1}{b - a}$	
+	\item $E[x] = \dfrac{a + b}{2}$
+	\item $Var(x) = \dfrac{(b - a)^2}{12}$
+\end{itemize}
+\subsection{Variabili esponenziali}
+$X \texttildelow Exp(a)$
+\begin{itemize}
+	\item $F_{x}(s) = 1 - e^{as}$ 
+	\item $f_{x}(s) = a \cdot e^{-as}$	
+	\item $E[x] = \dfrac{1}{a}$
+	\item $Var(x) = \dfrac{1}{a^2}$
+\end{itemize}
+\newpage
+\subsection{Variabili normali(gaussiane)}
+Standard : $\zeta_0 \texttildelow N(0,1)$ \\ \\
+Generiche : $\zeta \texttildelow N(\mu,\sigma^2)$ \\ \\
+\textbf{Proprietà}
+\begin{itemize}
+	\item $\zeta = \mu + \sigma \cdot \zeta_0$
+	\item $F_{\zeta_0}(s) = \phi(s)$ (utilizziamo la tabella normale standard)
+	\item $\phi(-s) = 1 - \phi(s)$
+\end{itemize}
