@@ -2,5 +2,34 @@
 
 \chapter{Combinatoria}
 
-\section{Combinatoria}
-
+\section{Combinatoria di base}
+\subsection{Disposizioni}
+$|Disposizioni| = n_{(k)} = n(n - 1) \cdot ... \cdot (n - k - 1)$
+\subsection{Permutazioni}
+$|Permutazioni| = n!$
+\subsection{Combinazioni}
+$|Combinazioni| = \binom{n}{k} = \dfrac{n!}{k!(n - k)}$
+\subsection{Anagrammi}
+$|Anagrammi| = \binom{n}{a \ b \ c} = \dfrac{n!}{a!b!c!}$
+\subsection{Formula di Stifel}
+$\binom{n}{k} = \binom{n - 1}{k} + \binom{n - 1}{k - 1}$
+\subsection{Numeri di fibonacci}
+$\sum_{k = 0}^{\tfrac{1}{2}} \binom{n - 1 -k}{k}$
+\subsection{Principio di inclusione-esclusione}
+$|A_1 \cup A_2 \cup ... \cup A_n| = \sum_{0 \neq I \not\in \{1, 2, ..., n\}} (-1)^{|I| - 1} \cdot \prod_{i \in I} A_i$ \\ \\
+\textbf{Caso complementare} \\ \\
+$|(A_1 \cup A_2 \cup ... \cup A_n)^C| = \sum_{I \in \{1, 2, ..., n\}} (-1)^|I| \cdot \prod_{i \in I} A_i$
+\section{Combinatoria avanzata}
+\subsection{Funzioni iniettive}
+Sia $f:\{ 1, ..., m\} \rightarrow \{ 1, ..., n\}$ una funzione iniettiva (m $\leq$ n) \\ \\
+$|funzioni \ iniettive| = n_{m}$
+\subsection{Funzioni suriettive}
+Sia $f:\{ 1, ..., m\} \rightarrow \{ 1, ..., n\}$ una funzione suriettiva \\ \\
+$|funzioni \ suriettive| = 	 \displaystyle \sum_{k = 0}^{n} ()\binom{n}{k} \cdot (-1)^k \cdot (n - k)^m)$
+\subsection{Scombussolamenti}
+$|scombussolamenti| = \displaystyle \sum_{i = 2}^{n} (-1)^i \cdot n_{n - i}$
+\subsection{Numeri di Bell}
+$B_n = \displaystyle \sum_{k = 1}^{n} \binom{n - 1}{k - 1} \cdot B_{n - k}$
+\subsection{Numeri di Stirling}
+$S_{n, k}$ = numero di partizioni di \{ 1, 2, ..., n\} in k blocchi \\
+$S_{n, k} = k \cdot S_{n - 1, k} + S_{n - 1, k - 1}$
